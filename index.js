@@ -6,7 +6,7 @@ var app=express()
 var response;
 
 app.get('/',(req,res)=>{
-  res.writeHead(200, {'Content-Type': 'audio/mpeg','Cache-Control': 'no-cache'})
+  res.writeHead(200, {'Content-Type': 'audio/mpeg','Cache-Control': 'no-cache','Content-Length':Buffer.byteLength('ok','utf8')})
   res.write('ok')
   response=res
   response.on('drain',()=>{console.log('draaaaaaaaaaaaaaaaaaaaaiiiiiin!!!!!')})
