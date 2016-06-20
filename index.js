@@ -8,7 +8,7 @@ var response;
 app.get('/',(req,res)=>{
   res.writeHead(200, {'Content-Type': 'audio/mpeg'})
   response=res
-  response.on('drain',()=>console.log('draaaaaaaaaaaaaaaaaaaaaiiiiiin!!!!!');)
+  response.on('drain',()=>{console.log('draaaaaaaaaaaaaaaaaaaaaiiiiiin!!!!!')})
 })
 
 
