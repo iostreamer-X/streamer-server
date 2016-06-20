@@ -21,6 +21,8 @@ var ws = new WebSocketServer({server:server})
 ws.on('connection',(conn)=>{
   conn.on('message',(data)=>{
     if(response!=undefined)
-      response.write(data)
+      var r = response.write(data)
+      if(!r)
+        console.log('couldn\'t write');
   })
 })
