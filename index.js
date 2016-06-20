@@ -5,12 +5,12 @@ var WebSocketServer = require('ws').Server
 var app=express()
 var response;
 
-/*app.get('/',(req,res)=>{
+app.get('/',(req,res)=>{
   res.writeHead(200, {'Content-Type': 'audio/mpeg'})
   res.write('ok')
   response=res
   response.on('drain',()=>{console.log('draaaaaaaaaaaaaaaaaaaaaiiiiiin!!!!!')})
-})*/
+})
 
 
 var server = http.createServer(app)
